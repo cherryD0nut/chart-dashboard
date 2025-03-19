@@ -3,6 +3,9 @@ package com.vinns.dashboard.service;
 import com.vinns.dashboard.entity.Student;
 import com.vinns.dashboard.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

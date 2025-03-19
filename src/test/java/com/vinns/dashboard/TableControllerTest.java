@@ -3,18 +3,15 @@ package com.vinns.dashboard;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vinns.dashboard.entity.Student;
 import com.vinns.dashboard.repository.StudentRepository;
-import com.vinns.dashboard.service.StudentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
@@ -25,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestPropertySource(locations="classpath:application-test.properties")
-public class MainControllerTest {
+public class TableControllerTest {
 
     @Autowired
     protected MockMvc mockMvc;
@@ -50,7 +47,7 @@ public class MainControllerTest {
     @Test
     public void findAllStudents() throws Exception{
         // given
-        final String url = "/";
+        final String url = "/table/all";
         final String name = "Mafuyu Asahina";
         final String gender = "female";
         final int level = 1;
